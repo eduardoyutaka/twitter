@@ -1,12 +1,7 @@
 <div id="<%= dom_id tweet %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Body:</strong>
-    <%= tweet.body %>
+  <p class="border p-2">
+    <strong class="block font-medium mb-1">Body: <%= tweet.body %></strong>
+    <strong class="block font-medium mb-1">Author: <%= tweet.user.email %></strong>
+    <strong class="block font-medium mb-1">Tweeted at: <%= tweet.created_at.strftime("%-d/%-m/%y às %H:%M:%S %Z") %></strong>
   </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">User:</strong>
-    <%= tweet.user_id %>
-  </p>
-
 </div>
