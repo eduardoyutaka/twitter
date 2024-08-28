@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
 
   # GET /tweets or /tweets.json
   def index
-    @tweets = Tweet.where(followee: current_user).order(created_at: :desc)
+    @tweets = Tweet.joins(sender: :follows_as_follower).where(follows_as_follower: { follower_id: 1 }).order(:created_at: :desc).limit(800).distinct
   end
 
   # GET /tweets/1 or /tweets/1.json
