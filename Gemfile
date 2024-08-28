@@ -50,6 +50,9 @@ gem "bootsnap", require: false
 # Flexible authentication solution for Rails with Warden.
 gem "devise"
 
+# A library for generating fake data such as names, addresses, and phone numbers.
+gem "faker"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
